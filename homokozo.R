@@ -50,6 +50,18 @@ my_loop3 <- function(){
 	print(m)
 }
 
+my_loop4_next <- function(x) {
+  c <- NA
+  for(i in 1:x) {
+    if(i < x / 2) {
+      next
+    } else {
+      c[i] <- i
+    }
+  }
+  print(c)
+}
+
 my_while <- function(x) {
 	m <- NA
 	count <- 1
@@ -72,4 +84,18 @@ my_coin <- function() {
 			z <- z - 1
 		}
 	}
+}
+
+my_repeat <- function(x) {
+  y <- 0
+  z <- NA
+  repeat {
+    if(x > y){
+      y <- y + 1
+      z[y] <- rnorm(1)
+      print(z)
+    } else {
+      break
+    }
+  }
 }
